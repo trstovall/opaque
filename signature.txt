@@ -1,0 +1,26 @@
+
+Signatures are based on ed25519.
+
+Standard Schnorr signatures in ed25519 use the scheme
+
+y = H(m,a,b)*a + b.
+
+We want to liberate "a" and "b" from the hash so that signatures
+may be combined to form a single signature.  To start:
+
+s*B = sum(P_i, i).
+
+That is, a signer must prove that the sum of private keys is known.  "s"
+is the sum of private keys, "B" is the base point of the curve, and "P_i"
+is the ith Public key participating in the signature.
+
+Furthermore, a system of equations is devised so that simple substitution
+cannot be used to create a false solution to the signature.
+
+s1 * B = H(m1) * P_1 + H(m2) * P_2.
+s2 * B = H(m3) * P_3 + H(m4) * P_4.
+
+The system has 3 equations and 4 unknowns.  Furthermore, it can be reduced if m_m == m_n.
+
+For example, let m1 := m3.  Then,
+(s1+s2) * B = H(m1) (P_1 + P_3) + H(m2) * P_2 + H(m4) * P_4.
