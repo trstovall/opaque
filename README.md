@@ -1,4 +1,4 @@
-# chillis
+# opaque
 Opal (Organic Protocol for Autonomous Ledgers), a cryptocurrency, rebranded
 
 - Four votes:
