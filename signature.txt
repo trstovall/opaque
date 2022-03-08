@@ -24,3 +24,12 @@ The system has 3 equations and 4 unknowns.  Furthermore, it can be reduced if m_
 
 For example, let m1 := m3.  Then,
 (s1+s2) * B = H(m1) (P_1 + P_3) + H(m2) * P_2 + H(m4) * P_4.
+
+So,
+
+sign: (s1, s2) = (sum(x_i), sum(m_i*x_i)),
+    for i,j elem [0, n], where n >= 2 AND m_i != m_j if i != j AND x_i != x_j if i != j
+
+verify: s1*B = sum(x_i*B) AND s2*B = sum(m_i*x_i*B),
+    for i elem [0, n], DO NOT BATCH s1, s2
+
