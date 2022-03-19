@@ -1,6 +1,11 @@
 
 Signatures are based on ed25519.
 
+Identities are tied to a particular public key.  Each identity
+signs a message digest with the help of a deterministicly random
+session key.  However, this scheme allows/requires at least two
+messages to be signed simultaneously.
+
 Standard Schnorr signatures in ed25519 use the scheme
 
 y = H(m,a,b)*a + b.
