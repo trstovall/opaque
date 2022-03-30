@@ -1,0 +1,11 @@
+notes.txt
+
+https://en.wikipedia.org/wiki/SHA-2
+
+pki/test.c
+
+pki/src/sign.c
+
+https://2533.medium.com/how-to-create-a-static-libraries-in-c-2f3f2cd103b1
+
+https://docs.python.org/3/extending/index.html
