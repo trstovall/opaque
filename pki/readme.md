@@ -1,5 +1,6 @@
 Ed25519
 =======
+(https://github.com/orlp/ed25519)
 
 This is a portable implementation of [Ed25519](http://ed25519.cr.yp.to/) based
 on the SUPERCOP "ref10" implementation. Additionally there is key exchanging
